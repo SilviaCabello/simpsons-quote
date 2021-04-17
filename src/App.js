@@ -14,7 +14,7 @@ function App() {
   const [quote, setQuote] = useState(firstQuote);
   const getQuote = () => {
     axios
-      .get("https://simpsons-quotes-api.herokuapp.com/quotes")
+      .get("https://simpsons-quotes-api.herokuapp.com/quotes?count=5")
       .then((response) => response.data)
       .then((data) => {
         setQuote(data.results[0]);
