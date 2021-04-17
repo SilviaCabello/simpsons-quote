@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React from "react";
+import QuoteCard from "./components/QuoteCard";
 import './App.css';
+
+const firstQuote = {
+  "quote": "Eat my shorts",
+  "character": "Bart Simpson",
+  "image": "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FBartSimpson.png?1497567511638",
+  "characterDirection": "Right"
+  }
+
+};
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <QuoteCard />
+      <button type="button" onClick={getQuote}>
+        Get a new quote!
+      </button>
+      
     </div>
   );
 }
