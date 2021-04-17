@@ -16,9 +16,7 @@ function App() {
     axios
       .get("https://simpsons-quotes-api.herokuapp.com/quotes?count=5")
       .then((response) => response.data)
-      .then((data) => {
-        setQuote(data);
-      });
+      .then((data) => setQuote(data[0]));
   };
 
   return (
